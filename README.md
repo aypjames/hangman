@@ -80,3 +80,4 @@ after the third incorrect letter is entered.
 -   [Java ArrayLists](https://www.javatpoint.com/java-arraylist)
 -   [Java If Statement](https://www.javatpoint.com/java-if-else)
 -   [Java Loops](https://www.javatpoint.com/java-for-loop)
+-  	[Convert String to Char](https://www.javatpoint.com/java-string-to-char)
