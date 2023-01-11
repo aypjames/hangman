@@ -206,10 +206,12 @@ public class Main {
 	        System.out.print("(" + wordClue.length + " letters)");
 	        System.out.println("");
 	        System.out.println("Guess a letter or word:");
-	        String guess = scanner.nextLine().toLowerCase();
+	        String userGuess = scanner.nextLine().toLowerCase();
+	        
 	        boolean correctGuess = false;
-	        if(guess.length() == word.length()){
-	            if(guess.equals(word)){
+	        
+	        if(userGuess.length() == word.length()){
+	            if(userGuess.equals(word)){
 	                System.out.println("You win! The word was " + word);
 	                break;
 	            }
@@ -223,8 +225,8 @@ public class Main {
 	        }
 	        else{
 	            for (int i = 0; i < word.length(); i++) {
-	                if (word.charAt(i) == guess.charAt(0)) {
-	                    wordClue[i] = guess.charAt(0);
+	                if (word.charAt(i) == userGuess.charAt(0)) {
+	                    wordClue[i] = userGuess.charAt(0);
 	                    correctGuess = true;
 	                }
 	            }
@@ -232,7 +234,7 @@ public class Main {
 	                lives--;
 	    	    	System.out.println("");
 	                HangingDrawing.hangingDrawing(lives);
-	                System.out.println("Sorry, the word does not contain " + guess);
+	                System.out.println("Sorry, the word does not contain " + userGuess);
 	                System.out.println("You have " + lives + " " + livesText + " left");
 	            }
 	            if (!new String(wordClue).contains("_")) {
